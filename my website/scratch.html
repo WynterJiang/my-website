@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>My Scratch Page</h1>
+    <a href="#section2">Go to Section 2</a>
+  </div>
+
+  <div class="list-section">
+    <h2>My Interests</h2>
+    <ol>
+      <li>Books
+        <ul>
+          <li>A Brief History of Time</li>
+          <li>Cosmos</li>
+        </ul>
+      </li>
+      <li>Hobbies
+        <ul>
+          <li>Taekwondo</li>
+          <li>Video Editing</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="image-section">
+    <h2>A Cool Image</h2>
+    <img src="space.jpg" alt="Space" width="400">
+  </div>
+
+  <div class="video-section">
+    <h2>Embedded YouTube Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pSHVbLPWA28?si=UvNCQPx9Emdxd70U"
+      title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="anchor-target" id="section2">
+    <h2>This is Section 2 (Anchor Target)</h2>
+  </div>
+
+  <div class="webapp-link">
+    <h2>Try My BTS Personality Quiz!</h2>
+    <a href="webapp.html" style="color: #ffcc00; font-weight: bold;">
+      Click here to find out which BTS member you are 🎤
+    </a>
+  </div>
+
+  <div class="tableau-section">
+    <h2>YouTube Video Trends</h2>
+    <p>This interactive chart shows trending YouTube video statistics.</p>
+
+    <div class='tableauPlaceholder' id='viz1744667636184' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='YouTube video statistics ' src='https://public.tableau.com/static/images/Tr/TrendingYouTubevideoStatistics/Story1/1_rss.png' style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='TrendingYouTubevideoStatistics/Story1' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/Tr/TrendingYouTubevideoStatistics/Story1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='zh-CN' />
+      </object>
+    </div>
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1744667636184');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width = '1016px';
+      vizElement.style.height = '991px';
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </div>
+
+</body>
+</html>
+
+
