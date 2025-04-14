@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Which BTS Member Are You?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: #fff8e7;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #cc6600;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #cc6600;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link a {
+      color: #cc6600;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Which BTS Member Are You?</h1>
+
+    <form id="quizForm">
+      <div class="question">
+        <p>1. What is your ideal weekend?</p>
+        <label><input type="radio" name="q1" value="jk"> Working out 💪</label>
+        <label><input type="radio" name="q1" value="jin"> Cooking & eating 🍜</label>
+        <label><input type="radio" name="q1" value="rm"> Reading philosophy 📚</label>
+      </div>
+
+      <div class="question">
+        <p>2. What's your vibe?</p>
+        <label><input type="radio" name="q2" value="jimin"> Sweet and charming 😇</label>
+        <label><input type="radio" name="q2" value="rm"> Smart and calm 🧠</label>
+        <label><input type="radio" name="q2" value="jk"> Energetic and competitive 🔥</label>
+      </div>
+
+      <div class="question">
+        <p>3. Your favorite stage outfit color?</p>
+        <label><input type="radio" name="q3" value="jin"> Pink 💗</label>
+        <label><input type="radio" name="q3" value="jimin"> Black 🖤</label>
+        <label><input type="radio" name="q3" value="rm"> Beige 🧥</label>
+      </div>
+
+      <button type="button" onclick="calculateResult()">Get Result</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-link">
+      <a href="scratch.html">← Back to Scratch Page</a>
+    </div>
+  </div>
+
+  <script>
+    function calculateResult() {
+      const answers = {
+        jk: 0,
+        jin: 0,
+        rm: 0,
+        jimin: 0
+      };
+
+      const form = document.forms["quizForm"];
+      const q1 = form["q1"].value;
+      const q2 = form["q2"].value;
+      const q3 = form["q3"].value;
+
+      if (!q1 || !q2 || !q3) {
+        alert("Please answer all questions!");
+        return;
+      }
+
+      answers[q1]++;
+      answers[q2]++;
+      answers[q3]++;
+
+      let max = 0;
+      let result = "";
+
+      for (let key in answers) {
+        if (answers[key] > max) {
+          max = answers[key];
+          result = key;
+        }
+      }
+
+      const names = {
+        jk: "Jungkook 💥",
+        jin: "Jin 🍜",
+        rm: "RM 🧠",
+        jimin: "Jimin 🖤"
+      };
+
+      document.getElementById("result").innerText = `You are most like: ${names[result]}!`;
+    }
+  </script>
+
+</body>
+</html>
